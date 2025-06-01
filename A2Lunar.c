@@ -19,7 +19,7 @@ int main()
 
     int acceleration = 0;
 
-    clrscr;
+    clrscr();
     printf("=== Lunar Lander ===\n");
     printf("Altitude: %d.%d m | Fuel: %d.%d units\n\n", altitude / 10, altitude % 10, fuel / 10, fuel % 10);
 
