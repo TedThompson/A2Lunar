@@ -22,16 +22,16 @@ int main()
     clrscr();
     printf("=== Lunar Lander ===\n");
     printf("Altitude: %d.%d m | Fuel: %d.%d units\n\n", altitude / 10, altitude % 10, fuel / 10, fuel % 10);
-
+    printf("Step|ALT  |VEL  |Fuel\n");
     while (altitude > 0)
     {
-        printf("--- Step %d ---\n", ++step);
-        printf("Altitude: %d.%d m | Velocity: %d.%d m/s | Fuel: %d.%d units\n",
+        printf("%4d ", ++step);
+        printf("%3d.%d %3d.%d %2d.%d ",
                altitude / 10, altitude % 10, velocity / 10, velocity % 10, fuel / 10, fuel % 10);
 
         if (fuel > 0)
         {
-            printf("Enter thrust (0 to 50, scaled by 10): ");
+            printf("Burn?->");
             scanf("%d", &thrust);
 
             if (thrust < 0)
